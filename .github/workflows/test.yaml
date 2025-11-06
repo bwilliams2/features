@@ -32,12 +32,12 @@ jobs:
       
       - name: "Make local .claude directory"
         run: mkdir -p $HOME/.claude && touch $HOME/.claude/smoke-test
+      
+      - name: "Make local .claude.json file"
+        run: touch $HOME/.claude.json
 
       - name: "Make local .config/fish directory"
         run: mkdir -p $HOME/.config/fish && touch $HOME/.config/fish/smoke-test
-
-      - name: "Make local .claude.json file"
-        run: touch $HOME/.claude.json
       
       - name: "Generating tests for '${{ matrix.features }}' against '${{ matrix.baseImage }}'"
         run: devcontainer features test --skip-scenarios -f ${{ matrix.features }} -i ${{ matrix.baseImage }} .
