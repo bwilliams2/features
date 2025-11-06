@@ -10,10 +10,10 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "check file exists" test -f "$HOME/.ssh/smoke-test"
-check "check file exists" test -f "$HOME/.aws/smoke-test"
-check "check file exists" test -f "$HOME/.claude/smoke-test"
-check "check file exists" test -f "$HOME/.claude.json"
+check "check .ssh file exists" test -f "$HOME/.ssh/smoke-test"
+check "check .aws file exists" test -f "$HOME/.aws/smoke-test"
+check "check .claude file exists" test -f "$HOME/.claude/smoke-test"
+check "check .claude.json file exists" test -f "$HOME/.claude.json"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
