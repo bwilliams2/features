@@ -1,0 +1,11 @@
+{
+    "vscode": {
+        "image": "mcr.microsoft.com/devcontainers/base:focal",
+        "features": {
+            "sshmount": {
+                "forces_rebuild_for_test": "true"
+            }
+        },
+        "remoteUser": "vscode"
+    }
+}

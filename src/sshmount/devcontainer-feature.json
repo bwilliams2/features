@@ -9,6 +9,26 @@
             "type": "bind",
             "source": "${localEnv:HOME}/.ssh",
             "target": "/mnt/.ssh,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.aws",
+            "target": "/mnt/.aws,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude",
+            "target": "/mnt/.claude,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude.json",
+            "target": "/mnt/.claude.json,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.config/fish",
+            "target": "/mnt/.config/fish,readonly"
         }
     ]
 }
