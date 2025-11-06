@@ -7,7 +7,7 @@ Mounts the host's ~/.ssh directory into the container
 
 ```json
 "features": {
-    "ghcr.io/bwilliams2/ssh-mount/sshmount:0": {}
+    "ghcr.io/bwilliams2/features/sshmount:0": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Mounts the host's ~/.ssh directory into the container
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/bwilliams2/ssh-mount/blob/main/src/sshmount/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/bwilliams2/features/blob/main/src/sshmount/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
