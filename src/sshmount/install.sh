@@ -15,6 +15,13 @@ ln -s /mnt/.ssh $_REMOTE_USER_HOME/.ssh
 chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.aws
 ln -s /mnt/.aws $_REMOTE_USER_HOME/.aws
 
+# Mount .claude config
+chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude
+ln -s /mnt/.claude $_REMOTE_USER_HOME/.claude
+chown $_REMOTE_USER:$_REMOTE_USER /mnt/.claude.json
+ln -s /mnt/.claude.json $_REMOTE_USER_HOME/.claude.json
+
+
 # Mount .config/fish directory
 mkdir -p $_REMOTE_USER_HOME/.config
 chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.config/fish
