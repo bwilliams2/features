@@ -15,13 +15,22 @@ ln -s /mnt/.ssh $_REMOTE_USER_HOME/.ssh
 chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.aws
 ln -s /mnt/.aws $_REMOTE_USER_HOME/.aws
 
-# # Mount .claude directory
-# chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude
-# ln -s /mnt/.claude $_REMOTE_USER_HOME/.claude
+# Mount .claude directory
+mkdir -p $_REMOTE_USER_HOME/.claude
+chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude/agents
+ln -s /mnt/.claude/agents $_REMOTE_USER_HOME/.claude/agents
 
-# # Mount .claude.json file
-# chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude.json
-# ln -s /mnt/.claude.json $_REMOTE_USER_HOME/.claude.json
+# Mount .claude directory
+chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude/commands
+ln -s /mnt/.claude/commands $_REMOTE_USER_HOME/.claude/commands
+
+# Mount .claude directory
+chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude/settings.json
+ln -s /mnt/.claude/settings.json $_REMOTE_USER_HOME/.claude/settings.json
+
+# Mount .claude.json file
+chown -R $_REMOTE_USER:$_REMOTE_USER /mnt/.claude.json
+ln -s /mnt/.claude.json $_REMOTE_USER_HOME/.claude.json
 
 # Mount .config/fish directory
 mkdir -p $_REMOTE_USER_HOME/.config

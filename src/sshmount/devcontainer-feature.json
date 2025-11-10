@@ -1,7 +1,7 @@
 {
     "name": "ssh-mount",
     "id": "sshmount",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Mounts the host's config directories into the container",
     "options": {},
     "mounts": [
@@ -19,6 +19,26 @@
             "type": "bind",
             "source": "${localEnv:HOME}/.config/fish",
             "target": "/mnt/.config/fish,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude/agents",
+            "target": "/mnt/.claude/agents,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude/commands",
+            "target": "/mnt/.claude/commands,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude/settings.json",
+            "target": "/mnt/.claude/settings.json,readonly"
+        },
+        {
+            "type": "bind",
+            "source": "${localEnv:HOME}/.claude.json",
+            "target": "/mnt/.claude.json,readonly"
         }
     ]
 }
