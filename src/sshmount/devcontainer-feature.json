@@ -2,7 +2,7 @@
     "name": "ssh-mount",
     "id": "sshmount",
     "version": "0.0.4",
-    "description": "Mounts the host's ~/.ssh directory into the container",
+    "description": "Mounts the host's config directories into the container",
     "options": {},
     "mounts": [
         {
